@@ -26,6 +26,7 @@ section.dark-light {
 
 .container {
   width: 75vw;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -169,8 +170,8 @@ p.quote-symbol {
   align-items: center;
   width: 75vw;
   height: 75vw;
-  max-width: 300px;
-  max-height: 300px;
+  max-width: 280px;
+  max-height: 280px;
   margin: 2rem auto;
   background-color: var(--bg-light);
   box-shadow: 0 0 20px var(--bg-dark);
@@ -241,7 +242,7 @@ p.quote-symbol {
 /* -------------------- CONTACT ----------------------------------- */
 
 #contact {
-  padding: 5rem 0 3rem 0;
+  padding: 4rem 0 3rem 0;
 }
 
 .contact-item {
@@ -299,8 +300,9 @@ footer .text span {
   }
 
   /* -------------- ABOUT --------------- */
+  #about .col-padded,
   #about .col {
-    padding: 3rem 0;
+    padding: 4rem 0 3rem 0;
   }
 
   .about-img {
@@ -317,6 +319,7 @@ footer .text span {
   .tile {
     width: 20vw;
     height: 20vw;
+    margin: 2rem auto 4rem auto;
   }
 
   .tile .title {
@@ -335,6 +338,7 @@ footer .text span {
   /* -------------- TECHNOLOGIES --------------- */
   .tech-grid {
     grid-template-columns: 1fr 1fr 1fr;
+    padding: 3rem 0 5rem 0;
   }
 
   /* -------------- CONTACT --------------- */
@@ -344,3 +348,79 @@ footer .text span {
 }
 
 /* LARGE SCREEN */
+@media screen and (min-width: 992px) {
+  /* -------------- INTRODUCTION --------------- */
+  .page-title {
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+  }
+}
+
+/* EXTRA LARGE SCREEN */
+@media screen and (min-width: 1200px) {
+  /* -------------- GENERAL -------------------- */
+  h3.title-dash {
+    font-size: 1.2rem;
+  }
+
+  h2.title {
+    font-size: 2rem;
+    line-height: 2.4rem;
+  }
+
+  p.simple-text {
+    font-size: 1.1rem;
+  }
+
+  a.simple-link {
+    font-size: 1.4rem;
+  }
+
+  /* -------------- INTRODUCTION --------------- */
+  #intro .grid-col {
+    grid-gap: 5rem;
+  }
+
+  #intro .col-padded {
+    padding: 9rem 0;
+  }
+
+  .page-title {
+    font-size: 3.7rem;
+    line-height: 3.7rem;
+  }
+
+  /* -------------- ABOUT --------------- */
+  #about .col-padded,
+  #about .col {
+    padding: 6rem 0 4.5rem 0;
+  }
+
+  #about .grid-col {
+    grid-gap: 5rem;
+  }
+
+  .social-media-row {
+    font-size: 1.5rem;
+  }
+
+  /* -------------- INTERESTS --------------- */
+  .tile {
+    margin: 3rem auto 5rem auto;
+  }
+
+  .tile .title {
+    font-size: 1.7rem;
+    line-height: 2.1rem;
+  }
+
+  .tile i {
+    font-size: 1.5rem;
+  }
+
+  /* -------------- TECHNOLOGIES --------------- */
+  .tech-grid {
+    padding: 4rem 0 6rem 0;
+    grid-gap: 4rem;
+  }
+}
