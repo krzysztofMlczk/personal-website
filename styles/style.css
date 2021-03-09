@@ -148,7 +148,7 @@ p.quote-symbol {
 .social-media-row {
   font-size: 1.25rem;
   text-align: center;
-  margin-bottom: 3rem;
+  padding-bottom: 3rem;
 }
 
 .social-media-row a {
@@ -189,6 +189,10 @@ p.quote-symbol {
 .tile i {
   font-size: 1.5rem;
   text-align: center;
+}
+
+.tile .title {
+  margin-bottom: 0;
 }
 
 /* ---------------- TECHNOLOGIES ------------------ */
@@ -279,9 +283,56 @@ footer .text span {
 /* MEDIUM SCREEN */
 
 @media screen and (min-width: 768px) {
+  /* -------------- GENERAL --------------- */
   .grid-col {
     grid-template-columns: 1fr 1fr;
+    grid-gap: 3rem;
   }
+
+  /* -------------- INTRODUCTION --------------- */
+  #intro .col-padded {
+    padding: 5rem 0;
+  }
+
+  .hero-img {
+    padding-top: 3rem;
+  }
+
+  /* -------------- ABOUT --------------- */
+  #about .col {
+    padding: 3rem 0;
+  }
+
+  .about-img {
+    width: 100%;
+    border-radius: 0;
+    margin-top: 1.5rem;
+  }
+
+  /* -------------- INTERESTS --------------- */
+  #interests .grid-col {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .tile {
+    width: 20vw;
+    height: 20vw;
+  }
+
+  .tile .title {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+  }
+
+  .tile i {
+    font-size: 1.2rem;
+  }
+
+  .tile-grid {
+    grid-gap: 0.5rem;
+  }
+
+  /* -------------- TECHNOLOGIES --------------- */
 }
 
 /* LARGE SCREEN */
