@@ -241,7 +241,7 @@ p.quote-symbol {
 /* -------------------- CONTACT ----------------------------------- */
 
 #contact {
-  padding: 3rem 0;
+  padding: 5rem 0 3rem 0;
 }
 
 .contact-item {
@@ -333,6 +333,14 @@ footer .text span {
   }
 
   /* -------------- TECHNOLOGIES --------------- */
+  .tech-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  /* -------------- CONTACT --------------- */
+  #contact .grid-col {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 /* LARGE SCREEN */
