@@ -9,6 +9,7 @@
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   color: var(--text-color);
+  scroll-behavior: smooth;
 }
 
 section.light {
@@ -92,8 +93,12 @@ a.simple-link:hover > span,
 a.simple-link:hover > i {
   color: white;
 }
+/* ----------------- NAVBAR ------------------------ */
 
 /* ----------------- INTRO ------------------------ */
+#intro .social-media-row {
+  display: none;
+}
 
 .hero-img {
   width: 100%;
@@ -216,6 +221,10 @@ p.quote-symbol {
   padding-bottom: 3rem;
 }
 
+#portfolio .simple-text {
+  display: none;
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -225,6 +234,7 @@ p.quote-symbol {
 
 .projects-grid div {
   overflow: hidden;
+  box-shadow: 0 0 20px var(--bg-dark);
 }
 
 .projects-grid img {
@@ -341,6 +351,12 @@ footer .text span {
     padding: 3rem 0 5rem 0;
   }
 
+  /* -------------- PORTFOLIO --------------- */
+  #portfolio .grid-col {
+    grid-template-columns: 1fr;
+    grid-gap: 0rem;
+  }
+
   /* -------------- CONTACT --------------- */
   #contact .grid-col {
     grid-template-columns: 1fr 1fr 1fr;
@@ -370,6 +386,7 @@ footer .text span {
 
   p.simple-text {
     font-size: 1.1rem;
+    line-height: 2rem;
   }
 
   a.simple-link {
@@ -422,5 +439,50 @@ footer .text span {
   .tech-grid {
     padding: 4rem 0 6rem 0;
     grid-gap: 4rem;
+  }
+}
+
+/* XXL SCREEN */
+@media screen and (min-width: 1400px) {
+  /* -------------- INTRODUCTION --------------- */
+  #intro .grid-col {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  #intro .social-media-row {
+    display: block;
+    position: absolute;
+    top: 40%;
+    font-size: 1.2rem;
+  }
+
+  .hero-img {
+    width: 70%;
+    float: right;
+  }
+
+  .page-title {
+    top: 50%;
+    font-size: 5rem;
+    line-height: 5.5rem;
+  }
+
+  /* -------------- ABOUT --------------- */
+  #about .grid-col {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  /* -------------- PORTFOLIO --------------- */
+  #portfolio .grid-col {
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 5rem;
+  }
+
+  #portfolio .simple-text {
+    display: block;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
 }
