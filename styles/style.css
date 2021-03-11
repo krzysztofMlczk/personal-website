@@ -240,6 +240,7 @@ p.quote-symbol {
   margin: 2rem auto;
   background-color: var(--bg-light);
   box-shadow: 0 0 20px var(--bg-dark);
+  position: relative;
 }
 
 .tile.bright {
@@ -250,6 +251,27 @@ p.quote-symbol {
   width: 60%;
   display: grid;
   grid-template-columns: 1fr 2fr;
+}
+
+.desc {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  z-index: 10;
+  bottom: 0;
+  background-color: inherit;
+  height: 100%;
+  width: 70%;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in;
+  font-weight: 500;
+}
+
+/* acording to w3c this will work when user taps and hold on mobile */
+.tile:hover .desc,
+.tile:active .desc {
+  max-height: 100%;
 }
 
 .tile i {
@@ -395,6 +417,11 @@ footer .text span {
     grid-template-columns: 1fr 1fr 1fr;
   }
 
+  .desc {
+    font-size: 0.8rem;
+    line-height: 0.9rem;
+  }
+
   .tile {
     width: 20vw;
     height: 20vw;
@@ -469,6 +496,12 @@ footer .text span {
     font-size: 3.5rem;
     line-height: 3.5rem;
   }
+
+  /* ---------------- INTERESTS ----------------- */
+  .desc {
+    font-size: 1rem;
+    line-height: 1.2rem;
+  }
 }
 
 /* EXTRA LARGE SCREEN */
@@ -532,6 +565,11 @@ footer .text span {
   /* -------------- INTERESTS --------------- */
   .tile {
     margin: 3rem auto 5rem auto;
+  }
+
+  .desc {
+    font-size: 1rem;
+    line-height: normal;
   }
 
   .tile .title {
