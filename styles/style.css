@@ -373,6 +373,64 @@ footer .text span {
   opacity: 0.4;
 }
 
+/* ========================= PROJECTS PAGE ============================= */
+.back {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  text-decoration: none;
+}
+
+.back:hover {
+  color: var(--addition-color);
+}
+
+section.project {
+  padding: 3rem 0;
+}
+
+section.project .grid-col {
+  grid-gap: 3rem;
+}
+
+.project-img {
+  width: 100%;
+  object-fit: cover;
+  box-shadow: 0 0 20px var(--bg-dark);
+}
+
+.btn-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.btn {
+  text-decoration: none;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-weight: 300;
+  padding: 0.6rem 1.6rem;
+  border: 2px solid var(--addition-color);
+  color: var(--addition-color);
+  border-radius: 3px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.btn i {
+  color: inherit;
+  margin-right: 8px;
+}
+
+.btn:hover {
+  text-decoration: none;
+  border: 2px solid white;
+  color: white;
+}
+
 /* MEDIUM SCREEN */
 
 @media screen and (min-width: 768px) {
@@ -501,6 +559,10 @@ footer .text span {
   .desc {
     font-size: 1rem;
     line-height: 1.2rem;
+  }
+  /* ========================= PROJECTS PAGE ============================= */
+  .btn-wrap {
+    flex-direction: row;
   }
 }
 
