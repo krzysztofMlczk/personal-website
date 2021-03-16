@@ -431,6 +431,12 @@ section.project .grid-col {
   color: white;
 }
 
+pre {
+  max-height: 400px;
+  margin-top: 3rem !important;
+  background-color: var(--bg-dark) !important;
+}
+
 /* MEDIUM SCREEN */
 
 @media screen and (min-width: 768px) {
@@ -647,6 +653,11 @@ section.project .grid-col {
   .tech-grid {
     padding: 4rem 0 6rem 0;
     grid-gap: 4rem;
+  }
+
+  /* ============= PROJECTS PAGE ===================== */
+  pre {
+    max-height: none;
   }
 }
 

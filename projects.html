@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism-twilight.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/line-numbers/prism-line-numbers.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles/style.css">
     <title>Projects</title>
@@ -28,6 +30,37 @@
                         </div>
                     </article>
                 </div>
+                <pre class="line-numbers"><code class="language-jsx">
+                    export default function Home() {
+                        const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+                      
+                        const { setUserData } = useContext(UserContext);
+                      
+                        const toggle = () => {
+                          setIsSidebarOpen(!isSidebarOpen);
+                        };
+                      
+                        const logout = () => {
+                          setUserData({
+                            token: undefined,
+                            user: undefined,
+                          });
+                          localStorage.setItem("auth-token", "");
+                        };
+                      
+                        return (
+                          &lt;&gt;
+                            &lt;Sidebar isOpen={isSidebarOpen} toggle={toggle} logout={logout} /&gt;
+                            &lt;Navbar toggle={toggle} logout={logout} /&gt;
+                            &lt;Parallax /&gt;
+                            &lt;InfoSection {...downloadObj} /&gt;
+                            &lt;InfoSection {...aboutObj} /&gt;
+                            &lt;GallerySection autoPlaySpeed={4} /&gt;
+                            &lt;FooterSection /&gt;
+                          &lt;/&gt;
+                        );
+                      }
+                </code></pre>
             </div>
         </section>
         <section id="minigolf" class="project dark">
@@ -115,5 +148,8 @@
             </p>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/components/prism-core.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.min.js"></script>
 </body>
 </html>
