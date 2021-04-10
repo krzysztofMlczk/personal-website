@@ -154,6 +154,20 @@ a.simple-link:hover > i {
 .nav-links a:hover {
   color: var(--addition-color);
 }
+/* ----------------- NAVBAR - NO JAVASCRIPT ------------------------ */
+.static-nav-links li {
+  display: inline-block;
+}
+
+.static-nav-links a {
+  padding: 0.5rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.static-nav-links a:hover {
+  color: var(--addition-color);
+}
 
 /* ----------------- INTRO ------------------------ */
 #intro .social-media-row {
@@ -555,6 +569,14 @@ pre {
   .nav-bar .nav-links {
     font-size: 1.2rem;
   }
+  /* ----------------- NAVBAR - NO JAVASCRIPT ------------------------ */
+  .static-nav-links {
+    font-size: 1.2rem;
+  }
+
+  .static-nav-links a {
+    padding: 1rem;
+  }
 
   /* -------------- INTRODUCTION --------------- */
   .page-title {
@@ -600,6 +622,10 @@ pre {
   }
 
   .nav-bar .nav-links {
+    font-size: 1.5rem;
+  }
+  /* ----------------- NAVBAR - NO JAVASCRIPT ------------------------ */
+  .static-nav-links {
     font-size: 1.5rem;
   }
 
